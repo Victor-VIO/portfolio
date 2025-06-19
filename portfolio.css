@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  
+  
+  background: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 50;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #ff5722;
+}
+
+.download-btn {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero {
+  background: url('img/WhatsApp\ Image\ 2025-06-19\ at\ 09.18.41_0a110404.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  top:0px; 
+  left: 0px; 
+  
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.btn {
+  padding: 12px 20px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.about {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about-content img {
+  /* border-radius: 10px;
+  width: 250px;
+  height: auto; */
+  position: absolute; 
+  top: 680px; 
+  left: 300px; 
+  width: 300px; 
+  height: 300px; 
+  border-radius: 12px; 
+  border-width: 1px; 
+  border-color: #EBEBEAFF; 
+  border-style: solid; 
+  box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1F; /* shadow-xs */
+}
+
+
+
+.about-text {
+  position: absolute; 
+  top: 600px; 
+  left: 725px; 
+  width: 600px; 
+  font-family: Inter; /* Body */
+  font-size: 18px; 
+  line-height: 29px; 
+  font-weight: 400; 
+  color: #8C8D8BFF;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+.fun-facts ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.skills {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
+  position: absolute; 
+  top: 1050px; 
+  left: 120px; 
+  width: 1248px; 
+  height: 762px; 
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.skill-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skill-category h3 {
+  color: #ff5722;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  padding: 8px 16px;
+  border: 1px solid #ff5722;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #ff5722;
+}
+
+.skill-chart {
+  /* flex: 1;
+  min-width: 300px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px; */
+  position: absolute; 
+  /* padding: 5px; */
+  top: 184px; 
+  left: 648px; 
+  width: 600px; 
+  height: 384px; 
+  background: #FFFFFFFF; /* white */
+  border-radius: 8px; 
+  border-width: 1px; 
+  border-color: #EBEBEAFF; 
+  border-style: solid; 
+  box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1F; /* shadow-xs */
+}
+
