@@ -6,6 +6,9 @@
   <title>John Doe Portfolio</title>
   <link rel="stylesheet" href="portfolio.css">
   <script src="portfolio.js" defer></script>
+  <a href="thankyou.html"></a>
+
+
   <!-- <canvas id="skillChart" width="300" height="300"></canvas> -->
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -14,17 +17,17 @@
   <!-- Navigation -->
   <header>
     <nav class="navbar">
-      <div class="logo">John Doe Portfolio</div>
+      <div class="logo">Victor Idowu Portfolio</div>
       <ul class="nav-links">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
+        <!-- <li><a href="#testimonials">Testimonials</a></li> -->
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#" class="download-btn">Download CV</a>
+      <a href="img/Victor Idowu - Resume (1).pdf" target="_blank" class="download-btn">Download CV</a>
     </nav>
   </header>
 
@@ -190,7 +193,7 @@
 
     <!-- Project 1 -->
     <div class="project-card">
-      <img src="taskflowpro.png" alt="TaskFlowPro Screenshot">
+      <img src="img/images (4).jpg" alt="TaskFlowPro Screenshot">
       <div class="tech-tags">
         <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Flask</span><span>Python</span>
       </div>
@@ -203,7 +206,7 @@
 
     <!-- Project 2 -->
     <div class="project-card">
-      <img src="quiz-app.png" alt="Quiz App Screenshot">
+      <img src="img/download (6).jpg" alt="Quiz App Screenshot">
       <div class="tech-tags">
         <span>HTML</span><span>CSS</span><span>Python</span><span>Flask</span>
       </div>
@@ -216,7 +219,7 @@
 
     <!-- Project 3 -->
     <div class="project-card">
-      <img src="gpa-calculator.png" alt="GPA Calculator Screenshot">
+      <img src="img/images (5).png" alt="GPA Calculator Screenshot">
       <div class="tech-tags">
         <span>HTML</span><span>CSS</span><span>JavaScript</span>
       </div>
@@ -230,152 +233,95 @@
   </div>
 
   <!-- Project Modals -->
-  <div id="modal-taskflowpro" class="modal">
+  <div id="modal-taskflowpro" class="modal" onclick="outsideClick(event, 'taskflowpro')">
     <div class="modal-content">
       <span class="close" onclick="closeModal('taskflowpro')">&times;</span>
       <h3>TaskFlowPro</h3>
-      <p>A Task Manager which allows users to create, edit, view and delete their tasks.</p>
-      <p><strong>How to Run:</strong><br>
-        1. Clone the repo<br>
-        2. Run <code>pip install -r requirements.txt</code><br>
-        3. Start the app with <code>flask --debug run</code></p>
-      <p><strong>Error Handling Tip:</strong> If issues occur, try <code>pip uninstall -r requirements.txt</code> and repeat installation.</p>
+      <p>A task manager web application that lets users create, update, delete, and view tasks in an intuitive interface. Built using Flask and deployed on Render.</p>
     </div>
   </div>
 
-  <div id="modal-quizapp" class="modal">
+  <div id="modal-quizapp" class="modal" onclick="outsideClick(event, 'quizapp')">
     <div class="modal-content">
       <span class="close" onclick="closeModal('quizapp')">&times;</span>
       <h3>Quiz App</h3>
-      <p>Flask-based quiz app that renders a form, handles responses, and displays results. Supports styled layout and customizable topics.</p>
+      <p>A Flask-based quiz app where users answer questions and view their results. Supports forms, styled layout, and validation. Designed for interactive learning and fun.</p>
     </div>
   </div>
 
-  <div id="modal-gpacalc" class="modal">
+  <div id="modal-gpacalc" class="modal" onclick="outsideClick(event, 'gpacalc')">
     <div class="modal-content">
       <span class="close" onclick="closeModal('gpacalc')">&times;</span>
       <h3>GPA Calculator</h3>
-      <p>Allows users to enter assignments and grades, calculates GPA, and stores data with localStorage. Includes key press functionality and reset option.</p>
+      <p>This tool allows users to input assignment names and grades, calculate GPA in real-time, and save data using localStorage. Designed to be simple, interactive, and effective for students.</p>
     </div>
   </div>
 </section>
 
-<!-- JS for Modals -->
-<script>
-  function openModal(id) {
-    document.getElementById('modal-' + id).style.display = 'block';
-  }
-
-  function closeModal(id) {
-    document.getElementById('modal-' + id).style.display = 'none';
-  }
-</script>
-
-<!-- CSS Styling -->
-<style>
-.projects {
-  padding: 60px 40px;
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-  top:2500px;
-}
-
-.projects h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-.project-card {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.tech-tags span {
-  display: inline-block;
-  background: #f3f3f3;
-  border-radius: 15px;
-  padding: 4px 10px;
-  margin: 4px 4px 8px 0;
-  font-size: 12px;
-  color: #333;
-}
-
-.buttons {
-  margin-top: 15px;
-}
-
-.buttons button,
-.buttons .deploy-btn {
-  padding: 8px 14px;
-  margin: 5px;
-  border: none;
-  background: #ff5722;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal-content {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 500px;
-  position: relative;
-  text-align: left;
-}
-
-.modal-content h3 {
-  margin-top: 0;
-}
-
-.modal-content .close {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 22px;
-  cursor: pointer;
-  color: #333;
-}
-</style>
 
 
+  <section class="contact-section">
+    <h1 class="get">Get In Touch</h1>
+    <div class="contact-container">
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjkraeeb" method="POST">
+        <input type="text" placeholder="Your Name" name="name" required />
+        <input type="email" placeholder="Your Email" name="email" required />
+        <input type="text" placeholder="Subject" name="subject" required />
+        <textarea placeholder="Your Message" name="message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
 
+      <div class="contact-info">
+        <p><span>📧</span> v.idowu@alustudent.com</p>
+        <p><span>📞</span> +234 9065681490</p>
+        <div class="social-icons">
+          <!-- <a href="#"><i>LinkedIn</i></a>
+          <a href="#"><i>Dribbble</i></a>
+          <a href="#"><i>Twitter</i></a> -->
+          <div class="social-icons">
+            <a href="https://github.com/Victor-VIO" target="_blank">
+              <svg height="32" width="32" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 
+                  2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                  0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49
+                  -2.69-.94-.09-.23-.48-.94-.82-1.13-.28
+                  -.15-.68-.52-.01-.53.63-.01 1.08.58 
+                  1.23.82.72 1.21 1.87.87 2.33.66.07-.52
+                  .28-.87.51-1.07-1.78-.2-3.64-.89-3.64
+                  -3.95 0-.87.31-1.59.82-2.15-.08-.2-.36
+                  -1.02.08-2.12 0 0 .67-.21 2.2.82.64
+                  -.18 1.32-.27 2-.27.68 0 1.36.09 
+                  2 .27 1.53-1.04 2.2-.82 2.2-.82.44 
+                  1.1.16 1.92.08 2.12.51.56.82 
+                  1.27.82 2.15 0 3.07-1.87 3.75
+                  -3.65 3.95.29.25.54.73.54 1.48 
+                  0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38
+                  A8.013 8.013 0 0 0 16 8c0-4.42
+                  -3.58-8-8-8z"></path>
+              </svg>
+            </a>
+          
+            <a href="https://www.linkedin.com/in/victoridowu001?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+              <svg height="32" width="32" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 
+                  2.76 2.24 5 5 5h14c2.76 0 5-2.24 
+                  5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5
+                  -10.28c-.97 0-1.75-.79-1.75-1.76s.78-1.76 
+                  1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 
+                  1.76zm13.5 10.28h-3v-4.5c0-1.07-.02-2.44
+                  -1.49-2.44-1.49 0-1.72 1.16-1.72 2.36v4.58h-3v-9h2.89v1.23h.04c.4-.76 
+                  1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"></path>
+              </svg>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    © 2025 Victor Idowu. All rights reserved.
+  </footer>
+  
 </body>
 </html>
